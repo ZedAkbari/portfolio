@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa">
+<head>
+
+  <meta charset="utf-8"/>
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <title>زینب اکبری — توسعه‌دهندهٔ بک‌اند | Python &amp; Django</title>
+
+  <meta content="نمونه‌کارهای زینب اکبری، توسعه‌دهندهٔ بک‌اند — طراحی و ساخت API و سامانه‌های مقیاس‌پذیر با پایتون و جنگو." name="description"/>
+
+  <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <header class="site-header">
+
+    <div class="container nav-row">
+
+      <a class="logo" dir="ltr" href="#home">ZA<span>.</span></a>
+
+      <nav class="site-nav" id="menu">
+
+        <a class="active" href="#home">خانه</a>
+
+        <a href="#work">پروژه‌ها</a>
+
+        <a href="#skills">توانمندی‌ها</a>
+
+        <a href="#experience">تجربه‌ها</a>
+
+        <a href="#about">درباره من</a>
+
+        <a href="#education">تحصیلات</a>
+
+        <a href="#contact">تماس</a>
+
+        <a class="menu-close" href="#close">بستن منو ×</a>
+
+      </nav>
+
+      <a class="btn btn-gold btn-small" download="" href="assets/resume.pdf">دریافت رزومه <span class="btn-arrow">↓</span></a>
+
+    </div>
+
+  </header>
+
+  <>
+
+    <section class="hero" id="home">
+
+      <div class="container hero-grid">
+
+        <div class="hero-text">
+
+          <p class="hello anim d1"><span class="dash"></span>سلام، من <strong>زینب اکبری</strong> هستم</p>
+
+          <h1 class="anim d2">توسعه‌دهندهٔ <span class="accent">بک‌اند</span></h1>
+
+          <p class="hero-latin anim d2" dir="ltr">Python &amp; Django Developer</p>
+
+          <p class="hero-sub anim d3">توسعه‌دهنده بک‌اند با پایتون و جنگو؛ علاقه‌مند به ساخت
+
+            APIهای کاربردی و Scriptهای پایتون، از ایده‌پردازی تا پیاده‌سازی راهکارهای خلاقانه و قابل اعتماد.
+
+          </p>
+
+          <p class="hero-tagline anim d3" dir="ltr">Clean code. Reliable APIs. Practical solutions.</p>
+
+          <div class="hero-cta anim d4">
+
+            <a class="btn btn-gold" href="#work">مشاهدهٔ پروژه‌ها <span class="btn-arrow">←</span></a>
+
+            <a class="btn btn-outline" href="#about">دربارهٔ من</a>
+
+          </div>
+
+          <div class="hero-status anim d4">
+
+            <span class="pulse-dot"></span> آمادهٔ همکاری و پروژهٔ جدید
+
+          </div>
+
+        </div>
+
+        <div aria-hidden="true" class="hero-visual anim d3">
+
+          <div class="blob"></div>
+
+          <div class="dot-grid"></div>
+
+          <div class="code-window">
+
+            <div class="code-head" dir="ltr">
+
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+
+              <span class="file-name">views.py — APIMarket API</span>
+
+            </div>
+
+            <pre dir="ltr"><code><span class="c"># appointment booking endpoint</span>
+
+<span class="k">from</span> rest_framework <span class="k">import</span> viewsets
+
+<span class="k">class</span> <span class="t">APIProductViewSet</span>(viewsets.<span class="t">ModelViewSet</span>):
+
+    queryset = APIProduct.objects.<span class="f">all</span>()
+
+    serializer_class = APIProductSerializer
+
+    <span class="k">def</span> <span class="f">get_queryset</span>(self):
+
+        <span class="k">return</span> APIProduct.objects.<span class="f">by_category</span>(
+
+            self.request.category
+
+        )</code></pre>
+
+          </div>
+
+          <span class="chip chip-1">Python</span>
+
+          <span class="chip chip-2">Django</span>
+
+          <span class="chip chip-3">PostgreSQL</span>
+
+          <span class="chip chip-4">DRF</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <div aria-hidden="true" class="marquee" dir="ltr">
+
+      <div class="marquee-track">
+
+        <i></i><span>Python</span><i></i><span>Django</span><i></i><span>Django REST Framework</span><i></i>
+
+        <span>PostgreSQL</span><i></i><span>Docker</span><i></i><span>Git</span><i></i>
+
+        <span>Linux</span><i></i><span>Web Scraping</span><i></i>
+
+        <span>Python</span><i></i><span>Django</span><i></i><span>Django REST Framework</span><i></i>
+
+        <span>PostgreSQL</span><i></i><span>Docker</span><i></i><span>Git</span><i></i>
+
+        <span>Linux</span><i></i><span>Web Scraping</span><i></i>
+
+      </div>
+
+    </div>
+
+    <section class="section" id="work">
+
+      <div class="container">
+
+        <header class="section-head reveal">
+
+          <span class="kicker" dir="ltr">02 — SELECTED WORK</span>
+
+          <h2>پروژه‌های شاخص و دستاوردها</h2>
+
+          <p class="section-sub">چند نمونه از پروژه‌هایی که در مسیر یادگیری و پیشرفت ساختم — با تمرکز بر تجربه، تمرین و
+
+            یادگیری راهکارهای بهتر.</p>
+
+        </header>
+
+        <div class="projects-grid">
+
+          <article class="project-card reveal">
+
+            <div class="project-banner banner-c">
+
+              <span class="ghost-letter" dir="ltr">MarketAI</span>
+
+              <span class="badge">پروژهٔ منتخب</span>
+
+            </div>
+
+            <div class="project-body">
+
+              <h3>MarketAI — پلتفرم مدیریت کمپین‌های تبلیغاتی</h3>
+
+              <p>پلتفرمی برای مدیریت و اجرای کمپین‌های تبلیغاتی در پیام‌رسان‌ها، با قابلیت ارسال زمان‌بندی‌شدهٔ پیام،
+
+                تصویر، ویدئو و فایل.</p>
+
+              <ul class="tech-list" dir="ltr">
+
+                <li>Django</li>
+
+                <li>DRF</li>
+
+                <li>Python</li>
+
+                <li>Docker</li>
+
+                <li>Celery</li>
+
+              </ul>
+
+              <p class="metric">توسعهٔ بک‌اند، طراحی APIها و هماهنگی تیم توسعه</p>
+
+            </div>
+
+          </article>
+
+          <article class="project-card reveal">
+
+            <div class="project-banner">
+
+              <img alt="پیش‌نمایش پروژه APIMarket" class="project-image" src="assets/images/project_api.png"/>
+
+            </div>
+
+            <div class="project-body">
+
+              <h3>APIMarket — بازار خرید و فروش API</h3>
+
+              <p>پلتفرمی برای جست‌وجو، خرید و فروش APIهای کاربردی؛ با امکان انتشار API، دسترسی به مستندات و ارائه
+
+                راهکارهای آماده برای توسعه‌دهندگان.</p>
+
+              <ul class="tech-list" dir="ltr">
+
+                <li>Django</li>
+
+                <li>SQLite</li>
+
+                <li>HTML</li>
+
+                <li>CSS</li>
+
+              </ul>
+
+              <p class="metric">طراحی و توسعهٔ کامل بک‌اند و رابط کاربری پروژه</p>
+
+            </div>
+
+          </article>
+
+          <article class="project-card reveal">
+
+            <div class="project-banner banner-c">
+
+              <span class="ghost-letter" dir="ltr">BMS</span>
+
+            </div>
+
+            <div class="project-body">
+
+              <h3>Business Management System — سیستم مدیریت کسب‌وکار</h3>
+
+              <p>توسعهٔ پلتفرمی برای مدیریت متمرکز فرآیندهای سازمانی شامل پروژه‌ها، وظایف، منابع انسانی، جلسات و
+
+                حسابداری.</p>
+
+              <ul class="tech-list" dir="ltr">
+
+                <li>Django</li>
+
+                <li>DRF</li>
+
+                <li>MySQL</li>
+
+              </ul>
+
+              <p class="metric">توسعهٔ بک‌اند و پیاده‌سازی ماژول‌های مدیریتی سازمان</p>
+
+            </div>
+
+          </article>
+
+          <article class="project-card reveal">
+
+            <div class="project-banner banner-c">
+
+              <span class="ghost-letter" dir="ltr">Plugin</span>
+
+            </div>
+
+            <div class="project-body">
+
+              <h3>WordPress 3D Calculator — افزونه محاسبه‌گر سه‌بعدی</h3>
+
+              <p>افزونه‌ای اختصاصی برای وب‌سایت آلمانی با قابلیت نمایش تعاملی مدل سه‌بعدی بارگذاری‌شده و محاسبهٔ قیمت بر
+
+                اساس حجم مدل و پارامترهای ورودی.</p>
+
+              <ul class="tech-list" dir="ltr">
+
+                <li>WordPress</li>
+
+                <li>JavaScript</li>
+
+                <li>DRF</li>
+
+              </ul>
+
+              <p class="metric">توسعهٔ افزونه، پیاده‌سازی نمایش سه‌بعدی و منطق محاسبهٔ حجم و قیمت سفارش</p>
+
+            </div>
+
+          </article>
+
+          <article class="project-card reveal">
+
+            <div class="project-banner">
+
+              <img alt="پیش‌نمایش پروژه Shop" class="project-image" src="assets/images/project_shop.png"/>
+
+            </div>
+
+            <div class="project-body">
+
+              <h3>Shop — سامانه مدیریت فروش و سفارشات</h3>
+
+              <p>فروشگاه اینترنتی با قابلیت مدیریت محصولات، کاربران و سفارش‌ها؛ همراه با سطح دسترسی مجزا برای مدیر و
+
+                کاربران و اتصال به درگاه پرداخت.</p>
+
+              <ul class="tech-list" dir="ltr">
+
+                <li>Django</li>
+
+                <li>Python</li>
+
+                <li>SQLite</li>
+
+              </ul>
+
+              <p class="metric">پیاده‌سازی سیستم احراز هویت، سطح دسترسی و فرایند پرداخت</p>
+
+              <a class="project-link" href="https://github.com/ZedAkbari/shop">مطالعهٔ موردی <span class="btn-arrow">←</span></a>
+
+            </div>
+
+          </article>
+
+          <article class="project-card reveal">
+
+            <div class="project-banner banner-c">
+
+              <span class="ghost-letter" dir="ltr">Design</span>
+
+            </div>
+
+            <div class="project-body">
+
+              <h3>طراحی صفحات WordPress — پروژهٔ وب‌سایت آلمانی</h3>
+
+              <p>طراحی و پیاده‌سازی صفحات وب‌سایت با استفاده از WordPress و Elementor، متناسب با سبک‌های بصری مدرن،
+
+                کلاسیک و سایر نیازهای طراحی.</p>
+
+              <ul class="tech-list" dir="ltr">
+
+                <li>WordPress</li>
+
+                <li>Elementor</li>
+
+                <li>CSS</li>
+
+                <li>JavaScript</li>
+
+              </ul>
+
+              <p class="metric">طراحی و پیاده‌سازی صفحات و شخصی‌سازی ظاهر وب‌سایت متناسب با هویت بصری پروژه</p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section section-alt" id="skills">
+
+      <div class="container">
+
+        <header class="section-head reveal">
+
+          <span class="kicker" dir="ltr">03 — CAPABILITIES</span>
+
+          <h2>تکنولوژی‌ها و توانمندی‌ها</h2>
+
+          <p class="section-sub">استک اصلی من برای ساختن بک‌اندهای مقیاس‌پذیر و قابل نگه‌داری.</p>
+
+        </header>
+
+        <div class="skills-grid" id="skills">
+
+          <div class="skill reveal">
+
+            <div class="skill-top">
+
+              <span class="skill-ico" dir="ltr">Py</span>
+
+              <div>
+
+                <h3>Python</h3>
+
+                <span>زبان اصلی</span>
+
+              </div>
+
+            </div>
+
+            <ul class="skill-list">
+
+              <li>برنامه‌نویسی شی‌گرا</li>
+
+              <li>کار با فایل‌ها و داده‌ها</li>
+
+              <li>نوشتن اسکریپت و خودکارسازی</li>
+
+            </ul>
+
+          </div>
+
+          <div class="skill reveal">
+
+            <div class="skill-top">
+
+              <span class="skill-ico" dir="ltr">Dj</span>
+
+              <div>
+
+                <h3>Django</h3>
+
+                <span>فریم‌ورک وب</span>
+
+              </div>
+
+            </div>
+
+            <ul class="skill-list">
+
+              <li>طراحی مدل‌ها و ارتباطات پایگاه‌داده</li>
+
+              <li>پیاده‌سازی منطق سمت سرور</li>
+
+              <li>مدیریت کاربران و سطح دسترسی</li>
+
+            </ul>
+
+          </div>
+
+          <div class="skill reveal">
+
+            <div class="skill-top">
+
+              <span class="skill-ico" dir="ltr">DRF</span>
+
+              <div>
+
+                <h3>Django REST Framework</h3>
+
+                <span>ساخت API</span>
+
+              </div>
+
+            </div>
+
+            <ul class="skill-list">
+
+              <li>توسعه APIهای مبتنی بر REST</li>
+
+              <li>سریال‌سازی و اعتبارسنجی داده‌ها</li>
+
+              <li>پیاده‌سازی عملیات CRUD</li>
+
+            </ul>
+
+          </div>
+
+          <div class="skill reveal">
+
+            <div class="skill-top">
+
+              <span class="skill-ico" dir="ltr">API</span>
+
+              <div>
+
+                <h3>REST API</h3>
+
+                <span>طراحی و مستندسازی</span>
+
+              </div>
+
+            </div>
+
+            <ul class="skill-list">
+
+              <li>طراحی Endpointها</li>
+
+              <li>مدیریت درخواست و پاسخ‌ها</li>
+
+            </ul>
+
+          </div>
+
+          <div class="skill reveal">
+
+            <div class="skill-top">
+
+              <span class="skill-ico" dir="ltr">WS</span>
+
+              <div>
+
+                <h3>Web Scraping</h3>
+
+                <span>استخراج اطلاعات از وب</span>
+
+              </div>
+
+            </div>
+
+            <ul class="skill-list">
+
+              <li>کار با Selenium</li>
+
+              <li>استخراج اطلاعات از صفحات وب</li>
+
+              <li>تعامل با عناصر صفحات وب</li>
+
+            </ul>
+
+          </div>
+
+          <div class="skill reveal">
+
+            <div class="skill-top">
+
+              <span class="skill-ico" dir="ltr">DB</span>
+
+              <div>
+
+                <h3>PostgreSQL/MySQL</h3>
+
+                <span>پایگاه‌داده</span>
+
+              </div>
+
+            </div>
+
+            <ul class="skill-list">
+
+              <li>طراحی ساختار پایگاه‌داده</li>
+
+              <li>تعریف روابط بین جداول</li>
+
+            </ul>
+
+          </div>
+
+          <div class="skill reveal">
+
+            <div class="skill-top">
+
+              <span class="skill-ico" dir="ltr">Gt</span>
+
+              <div>
+
+                <h3>Git &amp; GitHub</h3>
+
+                <span>کار تیمی</span>
+
+              </div>
+
+            </div>
+
+            <ul class="skill-list">
+
+              <li>مدیریت Branchها</li>
+
+              <li>ثبت و مدیریت Commitها</li>
+
+              <li>Merge و کار با Pull Request</li>
+
+            </ul>
+
+          </div>
+
+          <div class="skill reveal">
+
+            <div class="skill-top">
+
+              <span class="skill-ico" dir="ltr">Lx</span>
+
+              <div>
+
+                <h3>Linux</h3>
+
+                <span>میزبانی و سرور</span>
+
+              </div>
+
+            </div>
+
+            <ul class="skill-list">
+
+              <li>کار با خط فرمان</li>
+
+              <li>مدیریت فایل‌ها و پوشه‌ها</li>
+
+              <li>آشنایی با محیط سرور</li>
+
+            </ul>
+
+          </div>
+
+          <div class="skill reveal">
+
+            <div class="skill-top">
+
+              <span class="skill-ico" dir="ltr">Dk</span>
+
+              <div>
+
+                <h3>Docker</h3>
+
+                <span>استقرار سرویس</span>
+
+              </div>
+
+            </div>
+
+            <ul class="skill-list">
+
+              <li>آشنایی اولیه با Docker</li>
+
+              <li>- اجرای یک پروژه در محیط Docker</li>
+
+            </ul>
+
+          </div>
+
+          <div class="skill reveal">
+
+            <div class="skill-top">
+
+              <span class="skill-ico" dir="ltr">Mp</span>
+
+              <div>
+
+                <h3>Multiprocessing / Multithreading</h3>
+
+                <span>اجرای هم‌زمان پردازش‌ها</span>
+
+              </div>
+
+            </div>
+
+            <ul class="skill-list">
+
+              <li>پیاده‌سازی چندپردازشی</li>
+
+              <li>پیاده‌سازی چندنخی</li>
+
+              <li>اجرای هم‌زمان وظایف مستقل</li>
+
+            </ul>
+
+          </div>
+
+          <div class="skill reveal">
+
+            <div class="skill-top">
+
+              <span class="skill-ico" dir="ltr">CL</span>
+
+              <div>
+
+                <h3>Celery</h3>
+
+                <span>اجرای وظایف پس‌زمینه</span>
+
+              </div>
+
+            </div>
+
+            <ul class="skill-list">
+
+              <li>تعریف تسک‌های پس‌زمینه</li>
+
+              <li>پیاده‌سازی تسک‌های زمان‌بندی‌شده</li>
+
+              <li>- اجرای تسک‌ها با Celery</li>
+
+            </ul>
+
+          </div>
+
+          <div class="skill reveal">
+
+            <div class="skill-top">
+
+              <span class="skill-ico" dir="ltr">WP</span>
+
+              <div>
+
+                <h3>WordPress</h3>
+
+                <span>میزبانی و سرور</span>
+
+              </div>
+
+            </div>
+
+            <ul class="skill-list">
+
+              <li>طراحی صفحات واکنش‌گرا با Elementor</li>
+
+              <li>شخصی‌سازی ظاهر صفحات وب</li>
+
+              <li>توسعه افزونه‌های اختصاصی محاسباتی</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section" id="experience">
+
+      <div class="container">
+
+        <header class="section-head reveal">
+
+          <span class="kicker" dir="ltr">04 — EXPERIENCE</span>
+
+          <h2>تجربه‌های کاری</h2>
+
+          <p class="section-sub">مسیر شغلی من در یک نگاه — از کارآموزی تا توسعه‌دهندهٔ بک‌اند.</p>
+
+        </header>
+
+        <ol class="timeline">
+
+          <li class="reveal">
+
+            <span class="t-date">۱۴۰۴</span>
+
+            <h3>طراح و توسعه‌دهندهٔ وردپرس — 3d-print-and-mill</h3>
+
+            <span class="t-place">همکاری پاره‌وقت و دورکاری در طراحی و توسعهٔ وب‌سایت آلمانی</span>
+
+            <ul>
+
+              <li>طراحی و پیاده‌سازی صفحات واکنش‌گرا با استفاده از قالب‌ها و صفحه‌سازهای وردپرس</li>
+
+              <li>توسعهٔ افزونه‌های اختصاصی با PHP , DjangoRestFramework</li>
+
+            </ul>
+
+          </li>
+
+          <li class="reveal">
+
+            <span class="t-date">۱۴۰۴ _ ۱۴۰۳</span>
+
+            <h3>توسعه‌دهندهٔ بک‌اند — شرکت توزیع فناور</h3>
+
+            <span class="t-place">همکاری در توسعهٔ پروژه‌های نرم‌افزاری و پیاده‌سازی راهکارهای سمت سرور</span>
+
+            <ul>
+
+              <li>توسعهٔ اسکریپت‌های پایتون و پیاده‌سازی قابلیت‌های سمت سرور</li>
+
+              <li>طراحی و توسعهٔ API با استفاده از Django REST Framework</li>
+
+              <li>مشارکت در توسعه و پیشبرد پروژه‌های نرم‌افزاری</li>
+
+              <li>هماهنگی و مدیریت یک تیم کوچک توسعه</li>
+
+              <li>همکاری تیمی، برنامه‌ریزی وظایف و حل مسائل فنی در طول اجرای پروژه</li>
+
+            </ul>
+
+          </li>
+
+          <li class="reveal">
+
+            <span class="t-date">۱۴۰۱</span>
+
+            <h3>توسعه‌دهندهٔ بک‌اند — رضوان سیستم</h3>
+
+            <span class="t-place">همکاری پاره‌وقت در توسعهٔ پروژه‌های مبتنی بر Django</span>
+
+            <ul>
+
+              <li>توسعهٔ قابلیت‌های سمت سرور با استفاده از Django</li>
+
+              <li>آشنایی عملی با طراحی و پیاده‌سازی REST API با Django REST Framework</li>
+
+              <li>مشارکت در توسعهٔ محصول و هماهنگی با اعضای تیم</li>
+
+              <li>تقویت مهارت‌های فنی و تجربهٔ کار در فرآیند توسعهٔ نرم‌افزار</li>
+
+            </ul>
+
+          </li>
+
+          <li class="reveal">
+
+            <span class="t-date">۱۴۰۱</span>
+
+            <h3>کارآموز توسعه‌دهندهٔ بک‌اند — رضوان سیستم</h3>
+
+            <span class="t-place">کارآموزی برنامه‌نویسی و کسب تجربه در محیط واقعی توسعه نرم‌افزار</span>
+
+            <ul>
+
+              <li>به‌کارگیری آموخته‌های برنامه‌نویسی در محیط کاری</li>
+
+              <li>آشنایی با فرآیند توسعه نرم‌افزار و فرهنگ کار تیمی</li>
+
+              <li>تقویت مهارت‌های ارتباطی، همکاری و حل مسئله</li>
+
+            </ul>
+
+          </li>
+
+        </ol>
+
+      </div>
+
+    </section>
+
+    <section class="section section-alt" id="about">
+
+      <div class="container">
+
+        <header class="section-head reveal">
+
+          <span class="kicker" dir="ltr">05 — ABOUT</span>
+
+          <h2>دربارهٔ من</h2>
+
+          <p class="section-sub">مسیر حرفه‌ای و رویکرد کاری</p>
+
+        </header>
+
+        <div class="about-grid">
+
+          <div class="about-text reveal">
+
+            <p>
+
+              توسعه‌دهندهٔ بک‌اند با تمرکز بر Python و Django هستم و از
+
+              طراحی APIها، ساخت منطق سمت سرور و تبدیل ایده‌ها به قابلیت‌های
+
+              کاربردی لذت می‌برم. تجربهٔ کار روی پروژه‌های
+
+              واقعی به من کمک کرده تا با چالش‌های متنوع توسعه
+
+              آشنا شوم و نگاه عملی‌تری به حل مسائل پیدا کنم.
+
+            </p>
+
+            <p>
+
+              در کنار عمیق‌تر کردن دانشم در حوزهٔ بک‌اند، به کشف کاربردهای فناوری‌های
+
+              جدید، به‌ویژه هوش مصنوعی و خودکارسازی فرایندها، علاقه دارم.
+
+              برایم جذاب است که یادگیری را به تجربه‌های عملی تبدیل کنم و
+
+              راه‌های تازه‌ای برای ساختن ابزارها و قابلیت‌های مفید پیدا کنم.
+
+            </p>
+
+            <br/>
+
+            <blockquote>«از ایده‌های خوب تا راه‌حل‌های کاربردی، مسیر ساختن همیشه برایم هیجان‌انگیز است.»</blockquote>
+
+          </div>
+
+          <aside class="about-card reveal">
+
+            <div class="avatar">
+
+              <span class="avatar-ring"></span>
+
+              <span class="avatar-face">ZA</span>
+
+            </div>
+
+            <h3>زینب اکبری</h3>
+
+            <span class="role">توسعه‌دهندهٔ بک‌اند</span>
+
+            <ul class="fact-list">
+
+              <li><span>موقعیت</span><strong>مشهد، ایران</strong></li>
+
+              <li><span>تمرکز</span><strong>بک‌اند و طراحی API</strong></li>
+
+              <li><span>تحصیلات</span><strong>دانشجو کارشناسی نرم‌افزار</strong></li>
+
+              <li><span>زبان</span><strong>فارسی · انگلیسی</strong></li>
+
+              <li><span>وضعیت</span><strong class="ok">آمادهٔ همکاری</strong></li>
+
+            </ul>
+
+          </aside>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section" id="education">
+
+      <div class="container">
+
+        <header class="section-head reveal">
+
+          <span class="kicker" dir="ltr">06 — BACKGROUND</span>
+
+          <h2>تحصیلات و یادگیری‌های تخصصی</h2>
+
+          <p class="section-sub">پایهٔ دانشگاهی و یادگیری مستمر — همراه با تجربه و تمرین عملی.</p>
+
+        </header>
+
+        <div class="edu-grid">
+
+          <article class="edu-card reveal">
+
+            <span class="edu-badge">تحصیلات</span>
+
+            <h3>کاردانی مهندسی کامپیوتر</h3>
+
+            <span class="edu-place">دانشگاه ملی مهارت الزهرا</span>
+
+            <span class="edu-date">۱۴۰۲ _ ۱۴۰۴</span>
+
+            <h3>کارشناسی گرایش نرم‌افزار</h3>
+
+            <span class="edu-place">دانشگاه ملی مهارت الزهرا</span>
+
+            <span class="edu-date">۱۴۰۴</span>
+
+          </article>
+
+          <article class="edu-card reveal">
+
+            <span class="edu-badge">دوره‌ها و گواهی‌نامه‌ها</span>
+
+            <h3>یادگیری تخصصی</h3>
+
+            <ul class="cert-list">
+
+              <li><strong>دورهٔ برنامه‌نویسی C++ — جهاد دانشگاهی شریعتی</strong></li>
+
+              <li><strong>دورهٔ برنامه‌نویسی Python — جهاد دانشگاهی شریعتی</strong></li>
+
+            </ul>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section section-alt contact" id="contact">
+
+      <div class="container">
+
+        <div class="contact-panel reveal">
+
+          <span class="kicker dark" dir="ltr">07 — LET'S CONNECT</span>
+
+          <h2>ایده‌ای برای همکاری دارید؟</h2>
+
+          <p class="contact-sub">
+
+            اگر زمینه‌ای برای همکاری، پروژه‌ای برای توسعه یا حتی موضوعی برای گفت‌وگو دارید، راه‌های ارتباطی من در دسترس
+
+            شماست.
+
+          </p>
+
+          <div class="contact-cta">
+
+            <a class="btn btn-dark" download="" href="assets/resume.pdf">
+
+              دریافت رزومه <span class="btn-arrow">↓</span>
+
+            </a>
+
+            <a class="btn btn-outline-dark" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=akbari.zed@gmail.com" target="_blank">
+
+              ارسال ایمیل
+
+            </a>
+
+          </div>
+
+          <ul class="contact-links">
+
+            <li>
+
+              <a href="mailto:akbari.zed@gmail.com">
+
+                <span class="c-ico" dir="ltr">@</span>
+
+                <span class="c-text"><span>ایمیل</span><strong dir="ltr">akbari.zed@gmail.com</strong></span>
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#contact">
+
+                <span class="c-ico" dir="ltr">in</span>
+
+                <span class="c-text"><span>لینکدین</span><strong dir="ltr">linkedin.com/in/zeinab-akbari</strong></span>
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#contact">
+
+                <span class="c-ico" dir="ltr">GH</span>
+
+                <span class="c-text"><span>گیت‌هاب</span><strong dir="ltr">github.com/ZedAkbari</strong></span>
+
+              </a>
+
+            </li>
+
+            <li>
+
+              <a href="#contact">
+
+                <span class="c-ico" dir="ltr">TG</span>
+
+                <span class="c-text"><span>تلگرام</span><strong dir="ltr">t.me/ZedAkbari</strong></span>
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <footer class="site-footer">
+
+      <div class="container footer-row">
+
+        <p>© ۱۴۰۵ زینب اکبری — ساخته‌شده با HTML و CSS خالص</p>
+
+        <a class="to-top" href="#home">بازگشت به بالا <span>↑</span></a>
+
+      </div>
+
+    </footer>
+</body>
+</html>
